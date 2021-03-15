@@ -40,7 +40,6 @@ class Main {
           Game.takeTurn(row, column);
           if (Game.checkWin()) {
             scan.close();
-            System.out.println("++++++++++++++++++++++++++++");
 
             if (Game.getTurn() % 2 == 0) {
               System.out.println("Game Over. O Wins!");
