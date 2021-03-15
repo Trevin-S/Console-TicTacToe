@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 class Main {
   public static void main(String[] args) {
-
+    
     TicTacToe Game = new TicTacToe();
     Scanner scan = new Scanner(System.in);
     Boolean winner = false;
@@ -14,7 +14,6 @@ class Main {
 
     while (!winner) {
 
-      System.out.println("++++++++++++++++++++++++++++");
       if (Game.getTurn() % 2 == 0) {
         System.out.println(
             "First Player, its your turn! Enter the row and column you would like to play in seperated by a comma:");
@@ -39,7 +38,6 @@ class Main {
         if (Game.pickLocation(row, column)) {
 
           Game.takeTurn(row, column);
-          Game.printBoard();
           if (Game.checkWin()) {
             scan.close();
             System.out.println("++++++++++++++++++++++++++++");
